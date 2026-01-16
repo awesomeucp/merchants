@@ -1,0 +1,62 @@
+{
+    "slug": "monos",
+    "name": "Monos",
+    "url": "https://monos.com",
+    "description": "Premium travel luggage and accessories designed for modern travelers. Durable, stylish suitcases and bags built to last a lifetime.",
+    "logo": {
+        "url": "https://media.licdn.com/dms/image/v2/C560BAQFkbZgznI-sIw/company-logo_200_200/company-logo_200_200/0/1630564487969/monostravel_logo?e=2147483647&v=beta&t=dVMc0tI1BxzhbKjXgTSlZtTEJvz1jCIRCgnRcNaEtMc",
+        "width": 400,
+        "height": 400,
+        "alt": "Monos Logo"
+    },
+    "categories": ["travel", "luggage", "accessories"],
+    "tags": [
+        "suitcases",
+        "travel-gear",
+        "premium",
+        "durable",
+        "lifetime-warranty"
+    ],
+    "ucpProfile": {
+        "version": "2026-01-11",
+        "wellKnownUrl": "https://monos.com/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specification/checkout",
+                "schema": "https://ucp.dev/schemas/shopping/checkout.json"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-01-11",
+                "extends": "dev.ucp.shopping.checkout",
+                "spec": "https://ucp.dev/specification/fulfillment",
+                "schema": "https://ucp.dev/schemas/shopping/fulfillment.json"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specs/shopping",
+                "mcp": {
+                    "endpoint": "http://monos.com/api/ucp/mcp",
+                    "schema": "https://ucp.dev/services/shopping/openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "com.google.pay",
+                "version": "2026-01-11",
+                "providers": ["Google Pay"]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-01-16T09:30:00Z",
+        "submittedBy": "kiliczsh",
+        "verified": true,
+        "featured": true
+    }
+}

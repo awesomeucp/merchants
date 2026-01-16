@@ -1,0 +1,126 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for the UCP Merchant Directory
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in improving the UCP Merchant Directory! Please describe your feature idea below.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: A clear and concise description of the feature you'd like to see
+      placeholder: I would like the directory to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What use case does it address?
+      placeholder: |
+        Currently, when browsing merchants, I need to...
+        This is frustrating because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: How do you envision this feature working?
+      placeholder: |
+        The feature could work by...
+        For example, when a user...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Feature Category
+      description: Which area of the directory does this feature relate to?
+      options:
+        - Search / Discovery
+        - Filtering / Sorting
+        - Merchant Details / Display
+        - User Interface / UX
+        - API / Integration
+        - Documentation
+        - Performance
+        - Accessibility
+        - Mobile Experience
+        - Merchant Submission Process
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: User Type
+      description: Who would benefit from this feature?
+      options:
+        - AI Shopping Agents / Developers
+        - Merchants / Store Owners
+        - Directory Visitors / Shoppers
+        - Directory Maintainers
+        - All Users
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Approaches
+      description: Have you considered any alternative solutions or workarounds?
+      placeholder: |
+        Alternative 1: ...
+        Alternative 2: ...
+        Why I prefer the proposed solution: ...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: willing-to-contribute
+    attributes:
+      label: Willingness to Contribute
+      description: Would you be willing to contribute this feature?
+      options:
+        - Yes, I can implement this feature
+        - Yes, I can help with implementation
+        - I can help with testing
+        - I can help with documentation
+        - I can provide feedback during development
+        - No, but I'm happy to provide more details
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information, mockups, examples, or context
+      placeholder: |
+        - Screenshots or mockups
+        - Examples from other directories
+        - Related issues or discussions
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing feature requests to avoid duplicates
+          required: true
+        - label: I have clearly described the problem this feature solves
+          required: true
+        - label: This feature aligns with the directory's goal of helping discover UCP merchants
+          required: true

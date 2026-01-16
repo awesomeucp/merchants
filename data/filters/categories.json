@@ -1,0 +1,117 @@
+[
+  {
+    "slug": "accessories",
+    "name": "Accessories",
+    "description": "Fashion and lifestyle accessories including jewelry, bags, and more"
+  },
+  {
+    "slug": "apparel",
+    "name": "Apparel",
+    "description": "Clothing and garments for all occasions"
+  },
+  {
+    "slug": "beauty",
+    "name": "Beauty",
+    "description": "Beauty and cosmetics products"
+  },
+  {
+    "slug": "books",
+    "name": "Books",
+    "description": "Books, magazines, and reading materials"
+  },
+  {
+    "slug": "electronics",
+    "name": "Electronics",
+    "description": "Consumer electronics and gadgets"
+  },
+  {
+    "slug": "fashion",
+    "name": "Fashion",
+    "description": "Fashion and style products"
+  },
+  {
+    "slug": "fitness",
+    "name": "Fitness",
+    "description": "Fitness equipment and athletic gear"
+  },
+  {
+    "slug": "food",
+    "name": "Food & Beverage",
+    "description": "Food, beverages, and groceries"
+  },
+  {
+    "slug": "footwear",
+    "name": "Footwear",
+    "description": "Shoes, boots, sandals, and other footwear"
+  },
+  {
+    "slug": "furniture",
+    "name": "Furniture",
+    "description": "Home and office furniture"
+  },
+  {
+    "slug": "health",
+    "name": "Health & Wellness",
+    "description": "Health and wellness products"
+  },
+  {
+    "slug": "home",
+    "name": "Home & Garden",
+    "description": "Home decor, garden supplies, and household items"
+  },
+  {
+    "slug": "jewelry",
+    "name": "Jewelry",
+    "description": "Fine jewelry, watches, and accessories"
+  },
+  {
+    "slug": "kids",
+    "name": "Kids & Baby",
+    "description": "Products for children and babies"
+  },
+  {
+    "slug": "luggage",
+    "name": "Luggage",
+    "description": "Travel luggage, bags, and accessories"
+  },
+  {
+    "slug": "outdoor",
+    "name": "Outdoor",
+    "description": "Outdoor gear and equipment"
+  },
+  {
+    "slug": "pets",
+    "name": "Pets",
+    "description": "Pet supplies and accessories"
+  },
+  {
+    "slug": "shoes",
+    "name": "Shoes",
+    "description": "All types of shoes and footwear"
+  },
+  {
+    "slug": "sports",
+    "name": "Sports",
+    "description": "Sports equipment and gear"
+  },
+  {
+    "slug": "sustainable",
+    "name": "Sustainable",
+    "description": "Eco-friendly and sustainable products"
+  },
+  {
+    "slug": "tech",
+    "name": "Technology",
+    "description": "Technology products and software"
+  },
+  {
+    "slug": "toys",
+    "name": "Toys & Games",
+    "description": "Toys, games, and entertainment"
+  },
+  {
+    "slug": "travel",
+    "name": "Travel",
+    "description": "Travel gear and accessories"
+  }
+]

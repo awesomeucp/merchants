@@ -1,0 +1,62 @@
+{
+    "slug": "pura-vida",
+    "name": "Pura Vida Bracelets",
+    "url": "https://www.puravidabracelets.com",
+    "description": "Handcrafted bracelets and jewelry with a purpose. Every purchase helps artisans around the world and supports charitable causes.",
+    "logo": {
+        "url": "https://media.licdn.com/dms/image/v2/D560BAQG-5xoOjDUGrA/company-logo_200_200/B56ZjJI0zsHkAM-/0/1755721190971/pura_vida_bracelets_logo?e=2147483647&v=beta&t=LmwEVSpCt0Ppdow4AdtY3og70AAf2eYlmg_p5n0Edh8",
+        "width": 400,
+        "height": 400,
+        "alt": "Pura Vida Bracelets Logo"
+    },
+    "categories": ["jewelry", "accessories", "fashion"],
+    "tags": [
+        "bracelets",
+        "handcrafted",
+        "artisan",
+        "charitable",
+        "sustainable"
+    ],
+    "ucpProfile": {
+        "version": "2026-01-11",
+        "wellKnownUrl": "https://www.puravidabracelets.com/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specification/checkout",
+                "schema": "https://ucp.dev/schemas/shopping/checkout.json"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-01-11",
+                "extends": "dev.ucp.shopping.checkout",
+                "spec": "https://ucp.dev/specification/fulfillment",
+                "schema": "https://ucp.dev/schemas/shopping/fulfillment.json"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specs/shopping",
+                "mcp": {
+                    "endpoint": "http://www.puravidabracelets.com/api/ucp/mcp",
+                    "schema": "https://ucp.dev/services/shopping/openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "com.google.pay",
+                "version": "2026-01-11",
+                "providers": ["Google Pay"]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-01-16T11:15:00Z",
+        "submittedBy": "kiliczsh",
+        "verified": true,
+        "featured": false
+    }
+}

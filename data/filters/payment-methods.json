@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Apple Pay",
+    "slug": "apple-pay",
+    "description": "Apple's digital wallet payment system"
+  },
+  {
+    "name": "Google Pay",
+    "slug": "google-pay",
+    "description": "Google's digital wallet payment system"
+  },
+  {
+    "name": "PayPal",
+    "slug": "paypal",
+    "description": "PayPal digital payment platform"
+  },
+  {
+    "name": "Stripe",
+    "slug": "stripe",
+    "description": "Credit card processing via Stripe"
+  },
+  {
+    "name": "Shop Pay",
+    "slug": "shop-pay",
+    "description": "Shopify's accelerated checkout"
+  },
+  {
+    "name": "Amazon Pay",
+    "slug": "amazon-pay",
+    "description": "Amazon's digital payment service"
+  },
+  {
+    "name": "Venmo",
+    "slug": "venmo",
+    "description": "Venmo peer-to-peer payment"
+  },
+  {
+    "name": "Klarna",
+    "slug": "klarna",
+    "description": "Buy now, pay later service"
+  },
+  {
+    "name": "Affirm",
+    "slug": "affirm",
+    "description": "Point-of-sale installment loans"
+  },
+  {
+    "name": "Afterpay",
+    "slug": "afterpay",
+    "description": "Buy now, pay later in installments"
+  },
+  {
+    "name": "Credit Card",
+    "slug": "credit-card",
+    "description": "Standard credit card payment"
+  },
+  {
+    "name": "Debit Card",
+    "slug": "debit-card",
+    "description": "Standard debit card payment"
+  },
+  {
+    "name": "Cryptocurrency",
+    "slug": "crypto",
+    "description": "Cryptocurrency payments (Bitcoin, Ethereum, etc.)"
+  }
+]

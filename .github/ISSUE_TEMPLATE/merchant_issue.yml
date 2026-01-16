@@ -1,0 +1,104 @@
+name: Merchant Listing Issue
+description: Report an issue with a specific merchant listing or submission
+title: "[Merchant]: "
+labels: ["merchant-data", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to report issues with merchant data, incorrect information, or problems with a merchant submission.
+
+  - type: input
+    id: merchant-slug
+    attributes:
+      label: Merchant Slug
+      description: The slug of the merchant (from URL, e.g., "tech-haven")
+      placeholder: tech-haven
+    validations:
+      required: true
+
+  - type: input
+    id: merchant-url
+    attributes:
+      label: Merchant Directory URL
+      description: Link to the merchant's page in the directory
+      placeholder: https://merchants.awesomeucp.com/merchants/tech-haven
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What type of issue are you reporting?
+      options:
+        - Incorrect Information (name, description, etc.)
+        - Broken Logo / Image
+        - Invalid UCP Profile URL
+        - Incorrect Categories / Tags
+        - Dead Link / Store Offline
+        - Duplicate Listing
+        - Merchant Requested Removal
+        - UCP Profile Not Accessible
+        - Missing or Incorrect Data
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      description: Describe the issue with this merchant listing
+      placeholder: The merchant's logo is not loading because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct-information
+    attributes:
+      label: Correct Information
+      description: If reporting incorrect data, provide the correct information
+      placeholder: |
+        Correct merchant name: ...
+        Correct URL: ...
+        Correct UCP profile URL: ...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: verified-merchant
+    attributes:
+      label: Are you affiliated with this merchant?
+      description: Please let us know if you represent this merchant
+      options:
+        - No, I'm a third-party reporter
+        - Yes, I own/work for this merchant
+        - Yes, I submitted the original listing
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification-evidence
+    attributes:
+      label: Evidence / Verification
+      description: Provide any evidence, screenshots, or links that support your report
+      placeholder: |
+        - Screenshot of the error
+        - Link to correct information
+        - Email domain verification (if merchant owner)
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have verified this issue exists on the live directory
+          required: true
+        - label: I have provided accurate information to help resolve this issue
+          required: true
+        - label: If I represent the merchant, I can verify my affiliation if needed
+          required: false

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "dev.ucp.shopping.browse",
+    "displayName": "Browse",
+    "description": "Browse products and categories"
+  },
+  {
+    "name": "dev.ucp.shopping.search",
+    "displayName": "Search",
+    "description": "Search for products"
+  },
+  {
+    "name": "dev.ucp.shopping.cart",
+    "displayName": "Cart",
+    "description": "Add items to cart and manage cart"
+  },
+  {
+    "name": "dev.ucp.shopping.checkout",
+    "displayName": "Checkout",
+    "description": "Complete purchase and checkout"
+  },
+  {
+    "name": "dev.ucp.shopping.fulfillment",
+    "displayName": "Fulfillment",
+    "description": "Track orders and fulfillment status"
+  },
+  {
+    "name": "dev.ucp.shopping.returns",
+    "displayName": "Returns",
+    "description": "Initiate and manage returns"
+  },
+  {
+    "name": "dev.ucp.shopping.wishlist",
+    "displayName": "Wishlist",
+    "description": "Save items to wishlist"
+  },
+  {
+    "name": "dev.ucp.shopping.recommendations",
+    "displayName": "Recommendations",
+    "description": "Get personalized product recommendations"
+  },
+  {
+    "name": "dev.ucp.shopping.reviews",
+    "displayName": "Reviews",
+    "description": "Read and write product reviews"
+  },
+  {
+    "name": "dev.ucp.shopping.inventory",
+    "displayName": "Inventory",
+    "description": "Check real-time inventory availability"
+  }
+]

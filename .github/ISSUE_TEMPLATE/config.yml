@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: UCP Documentation
+    url: https://ucp.dev/docs
+    about: Learn about the Universal Commerce Protocol
+  - name: GitHub Discussions
+    url: https://github.com/awesomeucp/merchants/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: Merchant Submission Guide
+    url: https://merchants.awesomeucp.com/submit
+    about: Learn how to submit your merchant to the directory

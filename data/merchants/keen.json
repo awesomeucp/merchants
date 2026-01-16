@@ -1,0 +1,63 @@
+{
+    "slug": "keen",
+    "name": "KEEN Footwear",
+    "url": "https://www.keenfootwear.com",
+    "description": "Outdoor footwear and shoes built for adventure. Comfortable, durable boots and sandals designed for hiking, work, and everyday wear.",
+    "logo": {
+        "url": "https://media.licdn.com/dms/image/v2/D560BAQHYzxCyKNIiuQ/company-logo_200_200/B56ZhC2Ny1G4AI-/0/1753468165848/keen_logo?e=2147483647&v=beta&t=6toifG0Vxuj15vPayT4zE5byzlpUdIHeQWjS7NBLjo0",
+        "width": 400,
+        "height": 400,
+        "alt": "KEEN Footwear Logo"
+    },
+    "categories": ["footwear", "outdoor", "shoes"],
+    "tags": [
+        "hiking",
+        "boots",
+        "sandals",
+        "work-shoes",
+        "waterproof",
+        "sustainable"
+    ],
+    "ucpProfile": {
+        "version": "2026-01-11",
+        "wellKnownUrl": "https://www.keenfootwear.com/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specification/checkout",
+                "schema": "https://ucp.dev/schemas/shopping/checkout.json"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-01-11",
+                "extends": "dev.ucp.shopping.checkout",
+                "spec": "https://ucp.dev/specification/fulfillment",
+                "schema": "https://ucp.dev/schemas/shopping/fulfillment.json"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specs/shopping",
+                "mcp": {
+                    "endpoint": "http://www.keenfootwear.com/api/ucp/mcp",
+                    "schema": "https://ucp.dev/services/shopping/openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "com.google.pay",
+                "version": "2026-01-11",
+                "providers": ["Google Pay"]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-01-16T08:45:00Z",
+        "submittedBy": "kiliczsh",
+        "verified": true,
+        "featured": false
+    }
+}

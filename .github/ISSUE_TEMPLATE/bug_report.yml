@@ -1,0 +1,109 @@
+name: Bug Report
+description: Report a bug or issue with the UCP Merchant Directory
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below to help us investigate and fix the issue.
+
+  - type: dropdown
+    id: issue-area
+    attributes:
+      label: Issue Area
+      description: Which part of the directory is affected?
+      options:
+        - Website / UI
+        - Merchant Data / Display
+        - Search / Filtering
+        - API Endpoints
+        - Build / Deployment
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: I expected the search to show merchants matching...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: The search returned no results when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide step-by-step instructions to reproduce the issue
+      placeholder: |
+        1. Go to https://merchants.awesomeucp.com
+        2. Click on "Search"
+        3. Enter search term "..."
+        4. Observe error in...
+    validations:
+      required: true
+
+  - type: input
+    id: merchant-slug
+    attributes:
+      label: Merchant Slug (if applicable)
+      description: If the issue relates to a specific merchant, provide their slug
+      placeholder: tech-haven
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Information about your environment
+      value: |
+        - Browser: [e.g., Chrome 120, Firefox 121, Safari 17]
+        - OS: [e.g., Windows 11, macOS 14, Ubuntu 22.04, iOS 17, Android 14]
+        - Device: [e.g., Desktop, iPhone 15, Samsung Galaxy S24]
+        - Directory Version: [e.g., from URL or latest]
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-logs
+    attributes:
+      label: Error Logs / Screenshots
+      description: Paste any error messages, console logs, or attach screenshots
+      placeholder: Paste error logs here or drag and drop screenshots
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help us understand the issue
+      placeholder: Add any other context about the problem here
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing issues to ensure this bug hasn't been reported
+          required: true
+        - label: I have provided all the required information above
+          required: true
+        - label: I have tested this on the latest version of the directory
+          required: false

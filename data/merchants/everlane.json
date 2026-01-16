@@ -1,0 +1,63 @@
+{
+    "slug": "everlane",
+    "name": "Everlane",
+    "url": "https://www.everlane.com",
+    "description": "Modern essentials with transparent pricing and ethical factories. High-quality clothing basics designed to last, made sustainably.",
+    "logo": {
+        "url": "https://media.licdn.com/dms/image/v2/D560BAQFxWG1Zqc8tyQ/company-logo_200_200/B56ZqdDsClJkAM-/0/1763571581441/everlane_logo?e=1770249600&v=beta&t=A1aPeuA0Upt9C7dotlL3rIKnT_g_9ZTpCfS7RfNGTPw",
+        "width": 400,
+        "height": 400,
+        "alt": "Everlane Logo"
+    },
+    "categories": ["fashion", "apparel", "sustainable"],
+    "tags": [
+        "ethical-fashion",
+        "transparent",
+        "basics",
+        "sustainable",
+        "quality",
+        "minimalist"
+    ],
+    "ucpProfile": {
+        "version": "2026-01-11",
+        "wellKnownUrl": "https://www.everlane.com/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specification/checkout",
+                "schema": "https://ucp.dev/schemas/shopping/checkout.json"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-01-11",
+                "extends": "dev.ucp.shopping.checkout",
+                "spec": "https://ucp.dev/specification/fulfillment",
+                "schema": "https://ucp.dev/schemas/shopping/fulfillment.json"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specs/shopping",
+                "mcp": {
+                    "endpoint": "http://www.everlane.com/api/ucp/mcp",
+                    "schema": "https://ucp.dev/services/shopping/openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "com.google.pay",
+                "version": "2026-01-11",
+                "providers": ["Google Pay"]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-01-16T14:20:00Z",
+        "submittedBy": "kiliczsh",
+        "verified": true,
+        "featured": true
+    }
+}
