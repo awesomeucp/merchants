@@ -4,15 +4,15 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 mt-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 mt-12 sm:mt-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {/* About */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-2">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
               UCP Merchant Directory
             </h3>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-md">
               Discover stores ready for AI commerce. Browse verified UCP-enabled
               merchants compatible with AI shopping agents.
             </p>
