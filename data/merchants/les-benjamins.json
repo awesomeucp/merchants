@@ -4,10 +4,10 @@
     "url": "https://lesbenjamins.com",
     "description": "Contemporary streetwear brand blending Eastern heritage with modern design. Global fashion label known for bold graphics and cultural storytelling.",
     "logo": {
-        "url": "https://lesbenjamins.com/cdn/shop/files/Logo_png_-_Arka_plansiz.png?v=1670615914&width=200",
+        "url": "",
         "width": 200,
         "height": 200,
-        "alt": "Les Benjamins Logo"
+        "alt": "LB"
     },
     "categories": ["fashion", "apparel", "accessories"],
     "tags": [
@@ -53,7 +53,7 @@
     "metadata": {
         "submittedAt": "2026-01-19T12:00:19Z",
         "submittedBy": "kiliczsh",
-        "verified": true,
+        "verified": false,
         "featured": false
     }
 }

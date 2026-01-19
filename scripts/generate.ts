@@ -116,10 +116,14 @@ function validateMerchant(
   if (!merchant.logo || typeof merchant.logo !== 'object') {
     errors.push('Missing or invalid required field: logo');
   } else {
-    if (!merchant.logo.url || typeof merchant.logo.url !== 'string') {
-      errors.push('Missing or invalid required field: logo.url');
-    } else if (!merchant.logo.url.startsWith('https://')) {
-      errors.push('logo.url must be HTTPS');
+    // Allow empty URL if alt text is provided (for fallback text display)
+    const hasAlt = merchant.logo.alt && typeof merchant.logo.alt === 'string' && merchant.logo.alt.trim().length > 0;
+    if (!merchant.logo.url && !hasAlt) {
+      errors.push('Missing required field: logo.url (or provide logo.alt for text fallback)');
+    } else if (merchant.logo.url && typeof merchant.logo.url === 'string' && merchant.logo.url.length > 0) {
+      if (!merchant.logo.url.startsWith('https://')) {
+        errors.push('logo.url must be HTTPS');
+      }
     }
   }
 
