@@ -42,7 +42,7 @@ export function MerchantLogo({ logo, name, size = 'md' }: MerchantLogoProps) {
           alt={logo.alt || `${name} logo`}
           width={logo.width || sizePx[size]}
           height={logo.height || sizePx[size]}
-          className="object-cover w-full h-full"
+          className="object-contain w-full h-full"
           onError={() => setImageError(true)}
         />
       ) : (
