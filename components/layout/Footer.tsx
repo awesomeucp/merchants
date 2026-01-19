@@ -36,7 +36,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://ucp.dev/specification"
+                  href="https://ucp.dev/specification/overview/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
