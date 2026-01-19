@@ -1,0 +1,57 @@
+{
+    "slug": "flavus",
+    "name": "Flavus",
+    "url": "https://flavus.com",
+    "description": "Premium lifestyle and design products. Curated selection of modern essentials for everyday living.",
+    "logo": {
+        "url": "https://flavus.com/cdn/shop/t/25/assets/flavus-logo.svg?v=25362189875542261831669300322",
+        "width": 200,
+        "height": 200,
+        "alt": "Flavus Logo"
+    },
+    "categories": ["accessories", "home"],
+    "tags": [
+        "lifestyle",
+        "design",
+        "modern",
+        "essentials"
+    ],
+    "ucpProfile": {
+        "version": "2026-01-11",
+        "wellKnownUrl": "https://flavus.com/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-01-11"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-01-11",
+                "extends": "dev.ucp.shopping.checkout"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specs/shopping",
+                "mcp": {
+                    "endpoint": "http://flavus.com/api/ucp/mcp",
+                    "schema": "https://ucp.dev/services/shopping/openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "com.google.pay",
+                "version": "2026-01-11",
+                "providers": ["Google Pay"]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-01-19T12:23:06Z",
+        "submittedBy": "kiliczsh",
+        "verified": false,
+        "featured": false
+    }
+}
