@@ -1,0 +1,58 @@
+{
+    "slug": "korendy",
+    "name": "Korendy",
+    "url": "https://www.korendy.com.tr",
+    "description": "Korean beauty and skincare products in Turkey. Authentic K-beauty brands, cosmetics, and skincare essentials.",
+    "logo": {
+        "url": "https://app.1clickpopup.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjM5MDk0LCJwdXIiOiJibG9iX2lkIn19--08d46024691097a2e1ce275fef16598950834e75/Korendy_K%20logo.png",
+        "width": 200,
+        "height": 200,
+        "alt": "Korendy K logo"
+    },
+    "categories": ["beauty", "health"],
+    "tags": [
+        "k-beauty",
+        "korean",
+        "skincare",
+        "cosmetics",
+        "beauty"
+    ],
+    "ucpProfile": {
+        "version": "2026-01-11",
+        "wellKnownUrl": "https://www.korendy.com.tr/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-01-11"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-01-11",
+                "extends": "dev.ucp.shopping.checkout"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specs/shopping",
+                "mcp": {
+                    "endpoint": "http://www.korendy.com.tr/api/ucp/mcp",
+                    "schema": "https://ucp.dev/services/shopping/openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "com.google.pay",
+                "version": "2026-01-11",
+                "providers": ["Google Pay"]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-01-19T12:17:26Z",
+        "submittedBy": "kiliczsh",
+        "verified": false,
+        "featured": false
+    }
+}
