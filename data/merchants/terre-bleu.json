@@ -1,0 +1,58 @@
+{
+    "slug": "terre-bleu",
+    "name": "Terre Bleu",
+    "url": "https://www.terrebleu.ca",
+    "description": "Canadian lavender farm offering artisanal lavender products. Essential oils, skincare, home goods, and culinary lavender.",
+    "logo": {
+        "url": "https://www.terrebleu.ca/cdn/shop/files/Terre_Bleu_REBRAND_ddaec335-2294-4f47-bca4-e71dd6775e7a.svg?v=1738957020&width=170",
+        "width": 170,
+        "height": 170,
+        "alt": "Terre Bleu Logo"
+    },
+    "categories": ["beauty", "home", "food"],
+    "tags": [
+        "lavender",
+        "artisanal",
+        "natural",
+        "skincare",
+        "canadian"
+    ],
+    "ucpProfile": {
+        "version": "2026-01-11",
+        "wellKnownUrl": "https://www.terrebleu.ca/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-01-11"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-01-11",
+                "extends": "dev.ucp.shopping.checkout"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specs/shopping",
+                "mcp": {
+                    "endpoint": "http://www.terrebleu.ca/api/ucp/mcp",
+                    "schema": "https://ucp.dev/services/shopping/openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "com.google.pay",
+                "version": "2026-01-11",
+                "providers": ["Google Pay"]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-01-19T12:31:46Z",
+        "submittedBy": "kiliczsh",
+        "verified": false,
+        "featured": false
+    }
+}
