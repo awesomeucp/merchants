@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { UCPCard } from '@/components/cards/UCPCard';
+import { UCPBadge } from '@/components/badges/UCPBadge';
 import type { UCPDiscoveryProfile } from '@/lib/types/ucp-profile';
 import type { Metadata } from 'next';
 
@@ -50,8 +50,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const merchantName = profile?.payment?.handlers?.[0]?.config?.merchant_info?.merchant_name || decodedDomain;
 
   return {
-    title: `${merchantName} - UCP Card`,
-    description: `Universal Commerce Protocol card for ${merchantName}. View capabilities, payment methods, and services.`,
+    title: `${merchantName} - UCP Badge`,
+    description: `Universal Commerce Protocol badge for ${merchantName}. View capabilities, payment methods, and services.`,
     openGraph: {
       title: `${merchantName} - UCP Enabled`,
       description: `${merchantName} supports Universal Commerce Protocol with checkout, fulfillment, and payment capabilities.`,
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function UCPCardPage({ params }: PageProps) {
+export default async function UCPBadgePage({ params }: PageProps) {
   const { domain } = await params;
   const decodedDomain = decodeURIComponent(domain);
   const profile = await fetchUCPProfile(domain);
@@ -84,7 +84,7 @@ export default async function UCPCardPage({ params }: PageProps) {
       <div className="fixed -bottom-[15%] -right-[15%] w-[700px] h-[700px] bg-[#E6BAA3] dark:bg-amber-900 rounded-full blur-[140px] opacity-20 dark:opacity-10 z-0" />
 
       <div className="relative z-10 w-full max-w-md mx-auto">
-        <UCPCard domain={decodedDomain} profile={profile} />
+        <UCPBadge domain={decodedDomain} profile={profile} />
       </div>
     </div>
   );

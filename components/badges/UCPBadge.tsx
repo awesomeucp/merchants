@@ -5,7 +5,7 @@ import { ShoppingBag, Truck, Image, Check, Receipt, Percent, Key, CreditCard, Te
 import type { UCPDiscoveryProfile } from '@/lib/types/ucp-profile';
 import { domToBlob } from 'modern-screenshot';
 
-interface UCPCardProps {
+interface UCPBadgeProps {
   domain: string;
   profile: UCPDiscoveryProfile;
 }
@@ -43,10 +43,10 @@ const PAYMENT_CONFIG: Record<string, { icon: React.ReactNode; color: string; nam
   'dev.ucp.payment.card': { icon: <CreditCard size={16} weight="bold" style={{ color: '#059669' }} />, color: '#059669', name: 'Card Payment' },
 };
 
-export function UCPCard({ domain, profile }: UCPCardProps) {
+export function UCPBadge({ domain, profile }: UCPBadgeProps) {
   const [copied, setCopied] = useState(false);
   const [copying, setCopying] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
 
   const rawMerchantName = profile.payment?.handlers?.[0]?.config?.merchant_info?.merchant_name ||
                           profile.payment?.handlers?.[0]?.config?.merchant_id ||
@@ -60,13 +60,13 @@ export function UCPCard({ domain, profile }: UCPCardProps) {
   const version = profile.ucp.version;
 
   const shareText = `${merchantName} is UCP-enabled! Check out their Universal Commerce Protocol profile.`;
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : `https://ucp.dev/cards/${domain}`;
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : `https://ucp.dev/badges/${domain}`;
 
   const copyAsImage = async () => {
-    if (!cardRef.current) return;
+    if (!badgeRef.current) return;
     setCopying(true);
     try {
-      const blob = await domToBlob(cardRef.current, {
+      const blob = await domToBlob(badgeRef.current, {
         backgroundColor: '#F8F5F2',
         scale: 2,
       });
@@ -85,9 +85,9 @@ export function UCPCard({ domain, profile }: UCPCardProps) {
   };
 
   const copyImageToClipboard = async () => {
-    if (!cardRef.current) return;
+    if (!badgeRef.current) return;
     try {
-      const blob = await domToBlob(cardRef.current, {
+      const blob = await domToBlob(badgeRef.current, {
         backgroundColor: '#F8F5F2',
         scale: 2,
       });
@@ -115,9 +115,9 @@ export function UCPCard({ domain, profile }: UCPCardProps) {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      {/* Main Card */}
+      {/* Main Badge */}
       <div
-        ref={cardRef}
+        ref={badgeRef}
         className="rounded-3xl sm:rounded-[44px] p-5 sm:p-8 hover:-translate-y-3 transition-all duration-500"
         style={{
           backgroundColor: 'rgba(255,255,255,0.9)',

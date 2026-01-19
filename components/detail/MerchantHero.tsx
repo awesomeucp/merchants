@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 import { MerchantLogo } from '@/components/merchants/MerchantLogo';
 import { Badge } from '@/components/ui/Badge';
 import { analytics } from '@/lib/utils/analytics';
-import { CheckCircle, Star, ArrowSquareOut, Tag, Hash } from '@phosphor-icons/react';
+import { CheckCircle, Star, ArrowSquareOut, Tag, Hash, IdentificationCard } from '@phosphor-icons/react';
+import Link from 'next/link';
 import type { Merchant } from '@/lib/types/merchant';
 
 interface MerchantHeroProps {
@@ -17,6 +18,11 @@ function getMerchantUrlWithUtm(url: string, slug: string): string {
   urlObj.searchParams.set('utm_medium', 'referral');
   urlObj.searchParams.set('utm_campaign', slug);
   return urlObj.toString();
+}
+
+function getDomainFromUrl(url: string): string {
+  const urlObj = new URL(url);
+  return urlObj.hostname.replace(/^www\./, '');
 }
 
 export function MerchantHero({ merchant }: MerchantHeroProps) {
@@ -56,16 +62,25 @@ export function MerchantHero({ merchant }: MerchantHeroProps) {
               )}
             </div>
 
-            <a
-              href={getMerchantUrlWithUtm(merchant.url, merchant.slug)}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleExternalLinkClick}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors text-sm sm:text-base"
-            >
-              <span>Visit Store</span>
-              <ArrowSquareOut size={18} weight="bold" />
-            </a>
+            <div className="flex flex-wrap justify-center sm:justify-start gap-3">
+              <a
+                href={getMerchantUrlWithUtm(merchant.url, merchant.slug)}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleExternalLinkClick}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors text-sm sm:text-base"
+              >
+                <span>Visit Store</span>
+                <ArrowSquareOut size={18} weight="bold" />
+              </a>
+              <Link
+                href={`/badges/${getDomainFromUrl(merchant.url)}`}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-200 hover:bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-600 text-zinc-900 dark:text-zinc-100 font-medium rounded-lg transition-colors text-sm sm:text-base"
+              >
+                <span>View Badge</span>
+                <IdentificationCard size={18} weight="bold" />
+              </Link>
+            </div>
 
             <p className="text-base sm:text-lg text-zinc-700 dark:text-zinc-300 mb-6 leading-relaxed mt-4">
               {merchant.description}
