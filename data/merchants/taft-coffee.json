@@ -1,0 +1,58 @@
+{
+    "slug": "taft-coffee",
+    "name": "TAFT Coffee",
+    "url": "https://www.taftcoffee.com",
+    "description": "Specialty coffee roasters crafting premium quality coffee. Fresh roasted beans and brewing equipment for coffee enthusiasts.",
+    "logo": {
+        "url": "https://www.taftcoffee.com/cdn/shop/files/Taft_Coffee_Siyah_Logo_200x200_e950d266-847a-491a-beed-62081f0ff294.png?v=1614735654&width=200",
+        "width": 200,
+        "height": 200,
+        "alt": "TAFT Coffee Logo"
+    },
+    "categories": ["food"],
+    "tags": [
+        "coffee",
+        "specialty",
+        "roaster",
+        "beans",
+        "brewing"
+    ],
+    "ucpProfile": {
+        "version": "2026-01-11",
+        "wellKnownUrl": "https://www.taftcoffee.com/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-01-11"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-01-11",
+                "extends": "dev.ucp.shopping.checkout"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specs/shopping",
+                "mcp": {
+                    "endpoint": "http://www.taftcoffee.com/api/ucp/mcp",
+                    "schema": "https://ucp.dev/services/shopping/openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "com.google.pay",
+                "version": "2026-01-11",
+                "providers": ["Google Pay"]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-01-19T12:20:11Z",
+        "submittedBy": "kiliczsh",
+        "verified": false,
+        "featured": false
+    }
+}
