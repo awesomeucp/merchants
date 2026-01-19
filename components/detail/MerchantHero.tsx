@@ -11,6 +11,14 @@ interface MerchantHeroProps {
   merchant: Merchant;
 }
 
+function getMerchantUrlWithUtm(url: string, slug: string): string {
+  const urlObj = new URL(url);
+  urlObj.searchParams.set('utm_source', 'ucp-directory');
+  urlObj.searchParams.set('utm_medium', 'referral');
+  urlObj.searchParams.set('utm_campaign', slug);
+  return urlObj.toString();
+}
+
 export function MerchantHero({ merchant }: MerchantHeroProps) {
   // Track merchant view on mount
   useEffect(() => {
@@ -49,14 +57,14 @@ export function MerchantHero({ merchant }: MerchantHeroProps) {
             </div>
 
             <a
-              href={merchant.url}
+              href={getMerchantUrlWithUtm(merchant.url, merchant.slug)}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleExternalLinkClick}
-              className="text-blue-600 dark:text-blue-400 hover:underline mb-4 inline-flex items-center gap-1.5 group text-sm sm:text-base break-all"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors text-sm sm:text-base"
             >
-              <span>{merchant.url}</span>
-              <ArrowSquareOut size={16} weight="regular" className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
+              <span>Visit Store</span>
+              <ArrowSquareOut size={18} weight="bold" />
             </a>
 
             <p className="text-base sm:text-lg text-zinc-700 dark:text-zinc-300 mb-6 leading-relaxed mt-4">
