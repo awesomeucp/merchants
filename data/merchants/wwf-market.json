@@ -1,0 +1,59 @@
+{
+    "slug": "wwf-market",
+    "name": "WWF Market Türkiye",
+    "url": "https://wwfmarket.com",
+    "description": "Official World Wildlife Fund marketplace in Turkey. Shop sustainable products that support wildlife conservation and environmental protection.",
+    "logo": {
+        "url": "https://wwfmarket.com/cdn/shop/files/panda_tek_32x32_815fb4c6-d576-45fd-ba0f-319928bbe411_256x256_1.png?crop=center&height=32&v=1667203224&width=32",
+        "width": 32,
+        "height": 32,
+        "alt": "WWF Market Logo"
+    },
+    "categories": ["sustainable", "accessories", "home"],
+    "tags": [
+        "conservation",
+        "wildlife",
+        "eco-friendly",
+        "nonprofit",
+        "sustainable",
+        "gifts"
+    ],
+    "ucpProfile": {
+        "version": "2026-01-11",
+        "wellKnownUrl": "https://wwfmarket.com/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-01-11"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-01-11",
+                "extends": "dev.ucp.shopping.checkout"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specs/shopping",
+                "mcp": {
+                    "endpoint": "http://wwfmarket.com/api/ucp/mcp",
+                    "schema": "https://ucp.dev/services/shopping/openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "com.google.pay",
+                "version": "2026-01-11",
+                "providers": ["Google Pay"]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-01-19T12:01:45Z",
+        "submittedBy": "kiliczsh",
+        "verified": false,
+        "featured": false
+    }
+}
