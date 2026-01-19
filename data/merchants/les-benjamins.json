@@ -1,0 +1,59 @@
+{
+    "slug": "les-benjamins",
+    "name": "Les Benjamins",
+    "url": "https://lesbenjamins.com",
+    "description": "Contemporary streetwear brand blending Eastern heritage with modern design. Global fashion label known for bold graphics and cultural storytelling.",
+    "logo": {
+        "url": "https://lesbenjamins.com/cdn/shop/files/Logo_png_-_Arka_plansiz.png?v=1670615914&width=200",
+        "width": 200,
+        "height": 200,
+        "alt": "Les Benjamins Logo"
+    },
+    "categories": ["fashion", "apparel", "accessories"],
+    "tags": [
+        "streetwear",
+        "contemporary",
+        "luxury",
+        "cultural",
+        "global",
+        "bold-design"
+    ],
+    "ucpProfile": {
+        "version": "2026-01-11",
+        "wellKnownUrl": "https://lesbenjamins.com/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-01-11"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-01-11",
+                "extends": "dev.ucp.shopping.checkout"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-01-11",
+                "spec": "https://ucp.dev/specs/shopping",
+                "mcp": {
+                    "endpoint": "http://lesbenjamins.com/api/ucp/mcp",
+                    "schema": "https://ucp.dev/services/shopping/openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "com.google.pay",
+                "version": "2026-01-11",
+                "providers": ["Google Pay"]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-01-19T12:00:19Z",
+        "submittedBy": "kiliczsh",
+        "verified": true,
+        "featured": false
+    }
+}
