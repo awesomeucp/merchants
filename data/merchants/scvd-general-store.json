@@ -1,0 +1,83 @@
+{
+  "slug": "scvd-general-store",
+  "name": "SCVD General Store",
+  "url": "https://scvd.store",
+  "description": "Independent signed observations and digital goods for agentic commerce. Live UCP catalog search and lookup, checkout and order APIs over REST, with a custom USDC/x402 payment handler. Public evidence records a paid hello checkout on Base and completion replay returning the same order and settlement.",
+  "logo": {
+    "url": "https://scvd.store/favicon.svg",
+    "width": 100,
+    "height": 100,
+    "alt": "SCVD General Store dinosaur mark"
+  },
+  "categories": [
+    "tech"
+  ],
+  "tags": [
+    "digital-goods",
+    "signed-artifacts",
+    "x402",
+    "usdc",
+    "api"
+  ],
+  "ucpProfile": {
+    "version": "2026-08-25",
+    "wellKnownUrl": "https://scvd.store/.well-known/ucp",
+    "capabilities": [
+      {
+        "name": "dev.ucp.shopping.catalog.search",
+        "version": "2026-08-25",
+        "schema": "https://ucp.dev/2026-08-25/schemas/shopping/catalog_search.json",
+        "spec": "https://ucp.dev/specification/shopping/catalog/"
+      },
+      {
+        "name": "dev.ucp.shopping.catalog.lookup",
+        "version": "2026-08-25",
+        "schema": "https://ucp.dev/2026-08-25/schemas/shopping/catalog_lookup.json",
+        "spec": "https://ucp.dev/specification/shopping/catalog/"
+      },
+      {
+        "name": "dev.ucp.shopping.checkout",
+        "version": "2026-08-25",
+        "schema": "https://ucp.dev/2026-08-25/schemas/shopping/checkout.json",
+        "spec": "https://ucp.dev/specification/shopping/checkout/"
+      },
+      {
+        "name": "dev.ucp.shopping.order",
+        "version": "2026-08-25",
+        "schema": "https://ucp.dev/2026-08-25/schemas/shopping/order.json",
+        "spec": "https://ucp.dev/specification/shopping/order/"
+      },
+      {
+        "name": "store.scvd.shopping.inputs",
+        "version": "2026-09-16",
+        "spec": "https://scvd.store/ucp/specs/shopping-inputs",
+        "schema": "https://scvd.store/ucp/schemas/shopping-inputs.json"
+      }
+    ],
+    "services": {
+      "dev.ucp.shopping": {
+        "version": "2026-08-25",
+        "spec": "https://ucp.dev/specification/overview/",
+        "rest": {
+          "endpoint": "https://scvd.store/ucp/v1",
+          "schema": "https://ucp.dev/2026-08-25/services/shopping/rest.openapi.json"
+        }
+      }
+    },
+    "paymentHandlers": [
+      {
+        "name": "store.scvd.payment.usdc",
+        "version": "2026-09-16",
+        "providers": [
+          "USDC (x402)"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "submittedAt": "2026-09-19T16:08:12.365241Z",
+    "submittedBy": "seancrecord",
+    "verified": false,
+    "featured": false
+  }
+}
