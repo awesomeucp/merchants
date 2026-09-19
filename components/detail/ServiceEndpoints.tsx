@@ -54,8 +54,8 @@ export function ServiceEndpoints({ services }: ServiceEndpointsProps) {
                     </a>
                   </div>
                   <CodeBlock
-                    code={`curl ${service.rest.endpoint}/.well-known/ucp`}
-                    language="bash"
+                    code={service.rest.endpoint}
+                    language="text"
                   />
                 </div>
               )}
