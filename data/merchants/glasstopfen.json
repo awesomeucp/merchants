@@ -1,0 +1,92 @@
+{
+    "slug": "glasstopfen",
+    "name": "glasstopfen.de",
+    "url": "https://glasstopfen.de",
+    "description": "Agent-first shop for glass rear wiper hole plug sets (rear wiper delete) for many car makes. Catalog, cart, checkout and orders via UCP REST and MCP; prices per destination country with VAT and shipping included.",
+    "logo": {
+        "alt": "glasstopfen.de"
+    },
+    "categories": [
+        "accessories"
+    ],
+    "tags": [
+        "automotive",
+        "car-parts",
+        "rear-wiper-delete",
+        "worldwide-shipping",
+        "bank-transfer",
+        "mcp"
+    ],
+    "ucpProfile": {
+        "version": "2026-08-25",
+        "wellKnownUrl": "https://glasstopfen.de/.well-known/ucp",
+        "capabilities": [
+            {
+                "name": "dev.ucp.shopping.catalog.search",
+                "version": "2026-08-25",
+                "spec": "https://ucp.dev/2026-08-25/specification/shopping/catalog/search/",
+                "schema": "https://ucp.dev/2026-08-25/schemas/shopping/catalog_search.json"
+            },
+            {
+                "name": "dev.ucp.shopping.catalog.lookup",
+                "version": "2026-08-25",
+                "spec": "https://ucp.dev/2026-08-25/specification/shopping/catalog/lookup/",
+                "schema": "https://ucp.dev/2026-08-25/schemas/shopping/catalog_lookup.json"
+            },
+            {
+                "name": "dev.ucp.shopping.cart",
+                "version": "2026-08-25",
+                "spec": "https://ucp.dev/2026-08-25/specification/shopping/cart/",
+                "schema": "https://ucp.dev/2026-08-25/schemas/shopping/cart.json"
+            },
+            {
+                "name": "dev.ucp.shopping.checkout",
+                "version": "2026-08-25",
+                "spec": "https://ucp.dev/2026-08-25/specification/shopping/checkout/",
+                "schema": "https://ucp.dev/2026-08-25/schemas/shopping/checkout.json"
+            },
+            {
+                "name": "dev.ucp.shopping.fulfillment",
+                "version": "2026-08-25",
+                "spec": "https://ucp.dev/2026-08-25/specification/shopping/extensions/fulfillment/",
+                "schema": "https://ucp.dev/2026-08-25/schemas/shopping/fulfillment.json",
+                "extends": "dev.ucp.shopping.checkout"
+            },
+            {
+                "name": "dev.ucp.shopping.order",
+                "version": "2026-08-25",
+                "spec": "https://ucp.dev/2026-08-25/specification/shopping/order/",
+                "schema": "https://ucp.dev/2026-08-25/schemas/shopping/order.json"
+            }
+        ],
+        "services": {
+            "dev.ucp.shopping": {
+                "version": "2026-08-25",
+                "spec": "https://ucp.dev/2026-08-25/specification/overview/",
+                "rest": {
+                    "endpoint": "https://glasstopfen.de/ucp/v1",
+                    "schema": "https://ucp.dev/2026-08-25/services/shopping/rest.openapi.json"
+                },
+                "mcp": {
+                    "endpoint": "https://glasstopfen.de/mcp",
+                    "schema": "https://ucp.dev/2026-08-25/services/shopping/mcp.openrpc.json"
+                }
+            }
+        },
+        "paymentHandlers": [
+            {
+                "name": "de.glasstopfen.bank_transfer",
+                "version": "2026-08-25",
+                "providers": [
+                    "Bank transfer (EUR)"
+                ]
+            }
+        ]
+    },
+    "metadata": {
+        "submittedAt": "2026-11-14T07:30:00Z",
+        "submittedBy": "gcnet",
+        "verified": false,
+        "featured": false
+    }
+}
