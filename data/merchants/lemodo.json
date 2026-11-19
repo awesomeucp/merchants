@@ -1,0 +1,83 @@
+{
+  "slug": "lemodo",
+  "name": "Lemodo",
+  "url": "https://www.lemodo.de",
+  "description": "German online retailer for home, garden and leisure. Lemodo supports UCP catalog search and cart operations over REST. Its A2A agent prepares an open checkout and returns a handoff link to the Lemodo storefront, where the customer completes the purchase and payment.",
+  "logo": {
+    "url": "https://www.lemodo.de/media/bf/45/c4/1728557875/Lemodo-Weblayout.svg?ts=1728557875",
+    "alt": "Lemodo"
+  },
+  "categories": [
+    "home",
+    "outdoor",
+    "kids",
+    "toys"
+  ],
+  "tags": [
+    "shopware",
+    "germany",
+    "checkout-handoff"
+  ],
+  "ucpProfile": {
+    "version": "2026-08-25",
+    "wellKnownUrl": "https://www.lemodo.de/.well-known/ucp",
+    "capabilities": [
+      {
+        "name": "dev.ucp.shopping.cart",
+        "version": "2026-08-25",
+        "spec": "https://ucp.dev/specification/cart/",
+        "schema": "https://ucp.dev/2026-08-25/schemas/shopping/cart.json"
+      },
+      {
+        "name": "dev.ucp.shopping.catalog.search",
+        "version": "2026-08-25",
+        "spec": "https://ucp.dev/specification/catalog/",
+        "schema": "https://ucp.dev/2026-08-25/schemas/shopping/catalog.json"
+      },
+      {
+        "name": "dev.ucp.shopping.checkout",
+        "version": "2026-08-25",
+        "spec": "https://ucp.dev/specification/checkout/",
+        "schema": "https://ucp.dev/2026-08-25/schemas/shopping/checkout.json"
+      },
+      {
+        "name": "dev.ucp.shopping.discount",
+        "version": "2026-08-25",
+        "spec": "https://ucp.dev/specification/discount/",
+        "schema": "https://ucp.dev/2026-08-25/schemas/shopping/discount.json"
+      },
+      {
+        "name": "dev.ucp.shopping.order",
+        "version": "2026-08-25",
+        "spec": "https://ucp.dev/specification/order/",
+        "schema": "https://ucp.dev/2026-08-25/schemas/shopping/order.json"
+      },
+      {
+        "name": "dev.ucp.shopping.catalog.lookup",
+        "version": "2026-08-25",
+        "spec": "https://ucp.dev/specification/catalog/",
+        "schema": "https://ucp.dev/2026-08-25/schemas/shopping/catalog.json"
+      }
+    ],
+    "services": {
+      "dev.ucp.shopping": {
+        "version": "2026-08-25",
+        "spec": "https://ucp.dev/specification/overview/",
+        "rest": {
+          "endpoint": "https://www.lemodo.de/ucp/v1",
+          "schema": "https://ucp.dev/2026-08-25/services/shopping/rest.openapi.json"
+        },
+        "a2a": {
+          "endpoint": "https://www.lemodo.de/.well-known/agent-card.json"
+        }
+      }
+    },
+    "paymentHandlers": []
+  },
+  "metadata": {
+    "submittedAt": "2026-11-19T12:38:06Z",
+    "submittedBy": "FlundiNT",
+    "verified": false,
+    "featured": false
+  }
+}
